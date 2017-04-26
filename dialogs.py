@@ -32,7 +32,7 @@ class OpenDialog(Gtk.FileChooserDialog): #File>Open dialog
         #Activation response
         self.activate = activate
         #Prepare dialog
-        #self.set_current_folder(folder)
+        self.set_current_folder(folder)
         self.set_default_response(Gtk.ResponseType.OK)
         self.connect("file-activated", self.activate)
         self.connect("response", self.respond)
