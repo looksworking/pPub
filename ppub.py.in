@@ -506,7 +506,7 @@ class MainWindow: #Main window
         self.update_zoom_menu()
 
     def on_reset_zoom(self, widget, data=None): #Resets zoom
-        self.viewer.props.zoom_level = 1.0
+        self.viewer.props.zoom_level = 2.0
         self.update_zoom_menu()
 
     def on_toggle_caret(self, widget, data=None): #Toggles caret browsing
@@ -660,6 +660,7 @@ class MainWindow: #Main window
         self.config.set("Main", "default_folder", os.path.dirname(filename))
         self.config.set("Main", "default_file", filename)
         self.save_chapter_pos()
+        self.viewer.props.zoom_level = 2.0
         self.load_book(filename)
 
     def import_book(self, widget=None, data=None):
